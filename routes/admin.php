@@ -32,4 +32,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('dashboard', DashboardController::class)->name('dashboard');
     Route::resource('roles', RolesController::class);
 });
+Route::get('/test', function(){
+    return dd('Testing');
+});
 require __DIR__.'/auth.php';
